@@ -28,7 +28,6 @@ class App extends React.Component {
       noFioOrEmail = true;
       this.setState({bg_color_email: " bg-danger text-white"});
       errors+=" Ошибка - Не заполнен E-mail";
-      //this.setState({error: errors+" Ошибка - Не заполнен E-mail"});
     } else {
       this.setState({bg_color_email: "bg-white text-black"});
     }
@@ -36,14 +35,12 @@ class App extends React.Component {
       noFioOrEmail = true;
       this.setState({bg_color_fio: " bg-danger text-white"});
       errors+=" Ошибка - Не заполнено ФИО";
-     // this.setState({error: errors+" Ошибка - Не заполнено ФИО"});
     } else {
       this.setState({bg_color_fio: "bg-white text-black"});
     }
     if (!noFioOrEmail) {
       console.log("Ошибок нет");
       this.setState({error: ""})
-
 
      /* var xhr = new XMLHttpRequest();
       xhr.open('POST', 'public/index.php', true);
@@ -64,8 +61,6 @@ class App extends React.Component {
         alert(xhr.responseText); // responseText -- текст ответа.
       }*/
       
-
-
       fetch("index.php", { method: 'POST', 
       headers: {
         'Content-Type': 'application/json', 
